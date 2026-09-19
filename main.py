@@ -31,10 +31,7 @@ def play_number_guessing():
             print(f"Correct! You got it in {attempts} attempts.")
             return attempts
 
-def load_questions(path="questions.json"):
-    with open(path, "r", encoding="utf-8") as file:
-        data = json.load(file)
-    return data
+
 
 def main():
     while True:
@@ -53,6 +50,42 @@ def main():
             break
         else:
             print("Invalid option!")
+
+def load_questions(path="questions.json"):
+    with open(path, "r", encoding="utf-8") as file:
+        data = json.load(file)
+    return data
+
+def ask_question(item, number):
+    print(f"\nQ{number}: {item["question"]}")
+
+    for i, option in enumerate(item["options"], start=1):
+        print(f"{i}. {option}")
+
+    while True:
+        raw = input("Your answer (1-4): ").strip()
+
+        if not raw.isdigit():
+            print("Print a valid number")
+            continue
+
+        user_input = int(raw)
+
+        if 1 <= user_input <= len(item["options"]):
+            break
+        print(f"Please select an option from 1-{len(item["options"])}")
+
+    selected = item["options"][user_input - 1]
+
+    if selected == item["answer"]:
+        print("Correct!")
+        return True
+    else:
+        print(f"Wrong. The correct answer was: {item['answer']}")
+        return False
+
+questions = load_questions()
+ask_question(questions[0], 1)
 
 if __name__ == "__main__":
     main()
