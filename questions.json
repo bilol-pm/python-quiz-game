@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Which of these is a mutable data type in Python?",
+    "options": ["tuple", "string", "list", "int"],
+    "answer": "list",
+    "category": "Data Types"
+  },
+  {
+    "question": "What will print(type(5.0)) output?",
+    "options": ["<class 'int'>", "<class 'float'>", "<class 'str'>", "<class 'bool'>"],
+    "answer": "<class 'float'>",
+    "category": "Numbers"
+  },
+  {
+    "question": "Which keyword is used to define a function in Python?",
+    "options": ["func", "def", "function", "define"],
+    "answer": "def",
+    "category": "Functions"
+  },
+  {
+    "question": "What does len('Python') return?",
+    "options": ["5", "6", "7", "Error"],
+    "answer": "6",
+    "category": "Strings"
+  },
+  {
+    "question": "Which of these is an immutable data type?",
+    "options": ["list", "dictionary", "set", "tuple"],
+    "answer": "tuple",
+    "category": "Tuples"
+  },
+  {
+    "question": "What is the result of 7 // 2 in Python?",
+    "options": ["3.5", "3", "4", "1"],
+    "answer": "3",
+    "category": "Operators"
+  },
+  {
+    "question": "Which method adds an item to the end of a list?",
+    "options": ["add()", "append()", "insert()", "push()"],
+    "answer": "append()",
+    "category": "Lists"
+  },
+  {
+    "question": "What does bool(0) evaluate to?",
+    "options": ["True", "False", "0", "None"],
+    "answer": "False",
+    "category": "Booleans"
+  },
+  {
+    "question": "Which function converts a string to an integer?",
+    "options": ["str()", "int()", "float()", "chr()"],
+    "answer": "int()",
+    "category": "Casting"
+  },
+  {
+    "question": "Which loop is best suited when you don't know in advance how many times to iterate?",
+    "options": ["for", "while", "do-while", "repeat"],
+    "answer": "while",
+    "category": "Loops"
+  }
+]

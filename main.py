@@ -1,4 +1,5 @@
 import random
+import json
 
 def show_menu():
     print("\n=== GAME HUB ===")
@@ -29,6 +30,11 @@ def play_number_guessing():
         else:
             print(f"Correct! You got it in {attempts} attempts.")
             return attempts
+
+def load_questions(path="questions.json"):
+    with open(path, "r", encoding="utf-8") as file:
+        data = json.load(file)
+    return data
 
 def main():
     while True:
