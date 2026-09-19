@@ -84,8 +84,6 @@ def ask_question(item, number):
         print(f"Wrong. The correct answer was: {item['answer']}")
         return False
 
-questions = load_questions()
-ask_question(questions[0], 1)
 
 if __name__ == "__main__":
     main()
