@@ -31,6 +31,16 @@ def play_number_guessing():
             print(f"Correct! You got it in {attempts} attempts.")
             return attempts
 
+def play_quiz():
+    questions = load_questions()
+    score = 0
+
+    for number, item in enumerate(questions, start=1):
+        asking_question = ask_question(item, number)
+        if asking_question:
+            score += 1
+
+    print(f"The final score is {score}")
 
 
 def main():
@@ -42,7 +52,7 @@ def main():
             attempts = play_number_guessing()
             print(f"Recorded: Solved in {attempts} attempts")
         elif choice == "2":
-            print("Quiz Game goes here.")
+            play_quiz()
         elif choice == "3":
                 print("High Scores goes here.")
         elif choice == "4":
